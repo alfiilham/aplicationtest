@@ -1,0 +1,81 @@
+<zk>
+    <div align="center">
+        <window id="wnd" title="Contoh Fitur" border="normal" width="1000px" use="sadhar.si.contohprogram.contohfitur.contohfiturWnd" >
+            <grid>
+                <columns>
+                    <column width="120px"/>
+                    <column width="5px"/>
+                    <column width=""/>
+                </columns>
+                <rows>
+                    <row style="border:none">
+                        <label value="Nama"/>
+                        <label value=":"/>
+                        <textbox id="txtboxNama" width="800px" onOK="wnd.okNama()"/>
+                    </row>
+                    <row style="border:none">
+                        <label value="Alamat"/>
+                        <label value=":"/>
+                        <textbox id="txtboxAlamat" width="800px" rows="3"/>
+                    </row>
+                    <row style="border:none">
+                        <label value="Tanggal"/>
+                        <label value=":"/>
+                        <datebox id="dtboxTgl" width="100px" format="dd-MM-yyyy" onChange="wnd.changeTgl()"/>
+                    </row>
+                    <row style="border:none">
+                        <label value="Combo"/>
+                        <label value=":"/>
+                        <combobox id="cmbboxCombo" width="200px" readonly="true" onChange="wnd.changeCombo()"/>
+                    </row>
+                    <row style="border:none">
+                        <label value="Pilihan"/>
+                        <label value=":"/>
+                        <radiogroup id="rdgPilihan" onCheck="wnd.checkPilihan()">
+                            <radio label="Pilihan 1"/>
+                            <radio label="Pilihan 2"/>
+                        </radiogroup>
+                    </row>
+                    <row style="border:none">
+                        <label value="Double"/>
+                        <label value=":"/>
+                        <doublebox id="dbboxDouble" width="100px" onOK="wnd.okDouble()"/>
+                    </row>
+                    <row style="border:none">
+                        <label value=""/>
+                        <label value=""/>
+                        <button id="btnSimpan" style="font-weight:bold" image="/images/disk.png" dir="reverse" onClick="wnd.simpan()"/>
+                    </row>
+                </rows>
+            </grid>
+            <grid>
+                <columns>
+                    <column width=""/>
+                </columns>
+                <rows>
+                    <row style="border:none">
+                        <hbox>
+                            <label value="Cari Nama: "/>
+                            <textbox id="txtboxCariNama" width="150px" onChange="wnd.cariNama()"/>
+                            <button label="CARI" style="font-weight:bold" onClick="wnd.cariNama()"/>
+                        </hbox>
+                    </row>
+                    <row style="border:none">
+                        <listbox id="listboxData" onSelect="wnd.selectListboxData()" >
+                            <listhead sizable="true">
+                                <listheader label="No" width="50px" align="left"/>
+                                <listheader label="Nama" width="" align="left"/>
+                                <listheader label="Alamat" width="250px" align="left"/>
+                                <listheader label="Tgl" width="100px" align="center"/>
+                                <listheader label="Combo" width="100px" align="left"/>
+                                <listheader label="Pilihan" width="100px" align="left"/>
+                                <listheader label="Double" width="100px" align="right"/>
+                                <listheader label="Aksi" width="60px" align="center"/>
+                            </listhead>
+                        </listbox>
+                    </row>
+                </rows>
+            </grid>
+        </window>
+    </div>
+</zk>
